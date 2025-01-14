@@ -12,15 +12,24 @@ POST http://localhost:8080/auth/signup
 Content-Type: application/json
 
 {
-  "userName": "toto",
+  "username": "toto",
   "password": "1234"
 }
 
-### POST request to login
+### POST request to login with bober
 POST http://localhost:8080/auth/login
 Content-Type: application/json
 
 {
-  "userName": "bober",
+  "username": "bober",
   "password": "boberpassmultipass"
+}
+
+### POST request to login with user
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "username": "user",
+  "password": "user123"
 }
