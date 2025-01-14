@@ -1,0 +1,26 @@
+### GET request to doTry
+GET http://localhost:8080/test/first
+
+### GET request to doUser
+GET http://localhost:8080/test/user
+
+### GET request to doAdmin
+GET http://localhost:8080/test/admin
+
+### POST request to signup
+POST http://localhost:8080/auth/signup
+Content-Type: application/json
+
+{
+  "userName": "toto",
+  "password": "1234"
+}
+
+### POST request to login
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "userName": "bober",
+  "password": "boberpassmultipass"
+}
