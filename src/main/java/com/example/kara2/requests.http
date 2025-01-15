@@ -1,11 +1,46 @@
-### GET request to doTry
+### GET request to doTry with no token
 GET http://localhost:8080/test/first
 
-### GET request to doUser
+### GET request to doTry with user token
+GET http://localhost:8080/test/first
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzM2OTQwMzUzLCJleHAiOjE3MzcwMjY3NTN9.mQPMPbFTtc0ulzaH-nm_bH34S6Bd8f-jlnfcZEtrJQA
+
+### GET request to doTry with admin token
+GET http://localhost:8080/test/first
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNjk0NjAyMywiZXhwIjoxNzM3MDMyNDIzfQ.dRMOFAW1pBZGb37kVzlIH-uRd54WUcfLHi9koRXaYJw
+
+### GET request to /user with no token
 GET http://localhost:8080/test/user
 
-### GET request to doAdmin
+### GET request to /user with user token
+GET http://localhost:8080/test/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzM2OTQ1NTkwLCJleHAiOjE3MzcwMzE5OTB9.yoF2DFQXMyLSR12KOW-6x538ukOPhj86ifog1uXlqZw
+
+### GET request to /user with admin token
+GET http://localhost:8080/test/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNjk0NzE5MiwiZXhwIjoxNzM3MDMzNTkyfQ.wDGobjT_Y_Jpb1Hk-38qVE1P6TADiE_sn_5uhOdpEfM
+
+### GET request to /admin with no token
 GET http://localhost:8080/test/admin
+
+### GET request to /admin with user token
+GET http://localhost:8080/test/admin
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzM2OTQ1NTkwLCJleHAiOjE3MzcwMzE5OTB9.yoF2DFQXMyLSR12KOW-6x538ukOPhj86ifog1uXlqZw
+
+### GET request to /admin with admin token
+GET http://localhost:8080/test/admin
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNjk0NzE5MiwiZXhwIjoxNzM3MDMzNTkyfQ.wDGobjT_Y_Jpb1Hk-38qVE1P6TADiE_sn_5uhOdpEfM
+
+### GET request to /user/verified with no token
+GET http://localhost:8080/test/user/verified
+
+### GET request to /user/verified with user token
+GET http://localhost:8080/test/user/verified
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzM2OTQ3MDEwLCJleHAiOjE3MzcwMzM0MTB9.05Xp3vSvPmPscuOvau_qaTNeqGm18-c3DZBHB1kWA14
+
+### GET request to /user/verified with admin token
+GET http://localhost:8080/test/user/verified
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNjk0NzE5MiwiZXhwIjoxNzM3MDMzNTkyfQ.wDGobjT_Y_Jpb1Hk-38qVE1P6TADiE_sn_5uhOdpEfM
 
 ### POST request to signup
 POST http://localhost:8080/auth/signup
@@ -32,4 +67,13 @@ Content-Type: application/json
 {
   "username": "user",
   "password": "user123"
+}
+
+### POST request to login with admin
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin123"
 }

@@ -1,5 +1,6 @@
 package com.example.kara2.controller;
 
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,5 +22,11 @@ public class TestController {
     @GetMapping("/admin")
     public String doAdmin() {
         return "admin";
+    }
+
+    @Secured("ROLE_USER")
+    @GetMapping("/user/verified")
+    public String doUserVerified(){
+        return "verified";
     }
 }
